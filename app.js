@@ -1,15 +1,18 @@
 const computerChoiceDisplay = document.getElementById("computer-choice");
 const userChoiceDisplay = document.getElementById("user-choice");
 const resultDisplay = document.getElementById("result");
-const pointDisplay = document.getElementById("points");
+const userScoreDisplay = document.getElementById("user-score");
+const computerScoreDisplay = document.getElementById("computer-score");
 const possibleChoices = document.querySelectorAll("button");
 
 let userChoice;
 let computerChoice;
 let result;
-let points = 0;
+let userScore = 0;
+let computerScore = 0;
 
-pointDisplay.innerText = points;
+userScoreDisplay.innerText = userScore;
+computerScoreDisplay.innerText = computerScore;
 
 for (let possibleChoice of possibleChoices) {
   possibleChoice.addEventListener("click", (e) => {
@@ -40,28 +43,29 @@ function getResult() {
   }
   if (computerChoice === "rock" && userChoice === "paper") {
     result = "you win!";
-    points++;
+    userScore++;
   }
   if (computerChoice === "rock" && userChoice === "scissors") {
     result = "you lost!";
-    points--;
+    computerScore++;
   }
   if (computerChoice === "paper" && userChoice === "scissors") {
     result = "you win!";
-    points++;
+    userScore++;
   }
   if (computerChoice === "paper" && userChoice === "rock") {
     result = "you lost!";
-    points--;
+    computerScore++;
   }
   if (computerChoice === "scissors" && userChoice === "paper") {
     result = "you lost!";
-    points--;
+    computerScore++;
   }
   if (computerChoice === "scissors" && userChoice === "rock") {
     result = "you win!";
-    points++;
+    userScore++;
   }
   resultDisplay.innerText = result;
-  pointDisplay.innerText = points;
+  userScoreDisplay.innerText = userScore;
+  computerScoreDisplay.innerText = computerScore;
 }
