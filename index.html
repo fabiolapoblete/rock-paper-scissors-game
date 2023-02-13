@@ -13,13 +13,15 @@
 
       <section class="game">
         <section>
-          <h2>Computer</h2>
+          <h2 class="player">Computer</h2>
+          <h2 id="computer-score"><span></span> points</h2>
           <hr />
           <h2 id="computer-choice"></h2>
         </section>
 
         <section>
-          <h2>User</h2>
+          <h2 class="player">User</h2>
+          <h2 id="user-score"><span></span> points</h2>
           <hr />
           <h2 id="user-choice"></h2>
         </section>
@@ -28,24 +30,11 @@
       <h2 id="result"></h2>
 
       <section class="buttons">
-        <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="paper">Paper</button>
-        <button class="btn" id="scissors">Scissors</button>
-      </section>
-
-      <section class="points">
-        <h2>Player score: <span id="user-score"></span></h2>
-        <h2>Computer score: <span id="computer-score"></span></h2>
+        <button class="btn" id="rock">rock</button>
+        <button class="btn" id="paper">paper</button>
+        <button class="btn" id="scissors">scissors</button>
       </section>
     </div>
-
-    <!-- <section class="text">
-      <section class="text__choice">
-        <h2>Computer Choice: <span id="computer-choice"></span></h2>
-        <h2>User Choice: <span id="user-choice"></span></h2>
-        <h2>Result: <span id="result"></span></h2>
-      </section>
-    </section> -->
 
     <script src="app.js"></script>
   </body>

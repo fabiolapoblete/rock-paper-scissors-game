@@ -18,6 +18,7 @@ for (let possibleChoice of possibleChoices) {
   possibleChoice.addEventListener("click", (e) => {
     userChoice = e.target.id;
     userChoiceDisplay.innerText = userChoice;
+
     generateComputerChoice();
     getResult();
   });
@@ -41,7 +42,7 @@ function getResult() {
   if (computerChoice === userChoice) {
     result = "its a draw!";
   }
-  if (computerChoice === "rock" && userChoice === "paper") {
+  if (computerChoice === "rock;" && userChoice === "paper") {
     result = "you win!";
     userScore++;
   }
